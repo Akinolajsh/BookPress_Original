@@ -91,7 +91,6 @@ transition: all 400ms ;
 const Top=styled.div`
  width: 1100px;
  top: 120px;
- /* background-color: red; */
 position: absolute;
 z-index: 1;
 display: flex;
@@ -162,16 +161,9 @@ const Back = styled.div`
 background-color: rgba(0,0,0,0.8);
 width: 100%;
 height: 100%;
-/* backdrop-filter: blur(2px); */
 display: flex;
 align-items: flex-end;
 justify-content: center;
-/* z-index: -1; */
-/* position: relative; */
-/* z-index: 1; */
-
-
-/* line-height: 60px; */
 `
 const Main = styled.div`
   width: 50%;
@@ -181,8 +173,6 @@ const Main = styled.div`
   align-items: flex-end;
   flex-direction: column;
   z-index: 2;
-  /* background-color: red; */
-
 `;
 const Container = styled.div`
   height: 100vh;
@@ -190,9 +180,7 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  /* background-color: aquamarine; */
   color: black;
-  /* background-image: url(${hero}); */
 background-repeat: no-repeat;
 background-size:100% ;
 background-position: center;
