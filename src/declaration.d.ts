@@ -1,1 +1,1 @@
-declare module "*/assets"
+declare module "*./assets/Demo.mp4"

@@ -2,11 +2,31 @@ import React from "react";
 import styled from "styled-components";
 import Button from "../components/reUse/Button";
 import hero from "../assets/blog-post-single-1.jpeg"
+import Vid from "../assets/Demo.mp4"
 
 const HeroPage = () => {
+
+const data:any= [
+  {title: 'Discover'}, {title: 'Animation'}, 
+  {title: 'Branding'}, {title: 'Illustration'}, 
+  {title: 'Mobile'},  {title: 'Print'},  {title: 'Product Design'}, 
+  {title: 'Design'}, {title: 'Typography'}, {title: 'Web Design'}
+]
+
+
   return (
     <div>
       <Container>
+        <Top>
+{
+  data.map((el:any)=>(
+<Shape>
+{el.title}
+</Shape>
+  ))
+}
+        </Top>
+        <Bgvid src={Vid} autoPlay loop muted/>
 <Back>
 <Main>
           <BigText>
@@ -46,6 +66,46 @@ const HeroPage = () => {
 };
 
 export default HeroPage;
+
+
+
+const Shape =styled.div`
+padding: 10px 15px;
+display: flex;
+border-radius: 20px;
+justify-content: center;
+align-items: center;
+background-color: black;
+opacity: 0.6;
+color: white;
+cursor: pointer;
+transition: all 400ms ;
+
+:hover{
+  background-color: white;
+  color: black;
+  opacity: 1;
+}
+`
+
+const Top=styled.div`
+ width: 1100px;
+ top: 120px;
+ /* background-color: red; */
+position: absolute;
+z-index: 1;
+display: flex;
+justify-content: space-between;
+align-items: center;
+`
+
+const Bgvid = styled.video`
+height: 100%;
+width: 100%;
+position: absolute;
+object-fit: cover;
+z-index: -1;
+` 
 
 const Line = styled.div`
   height: 20px;
@@ -106,6 +166,11 @@ height: 100%;
 display: flex;
 align-items: flex-end;
 justify-content: center;
+z-index: -1;
+/* position: relative; */
+/* z-index: 1; */
+
+
 /* line-height: 60px; */
 `
 const Main = styled.div`
@@ -115,6 +180,7 @@ const Main = styled.div`
   justify-content: center;
   align-items: flex-end;
   flex-direction: column;
+  z-index: 2;
   /* background-color: red; */
 
 `;
@@ -124,9 +190,9 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: aquamarine;
+  /* background-color: aquamarine; */
   color: black;
-  background-image: url(${hero});
+  /* background-image: url(${hero}); */
 background-repeat: no-repeat;
 background-size:100% ;
 background-position: center;
