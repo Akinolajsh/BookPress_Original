@@ -166,7 +166,7 @@ height: 100%;
 display: flex;
 align-items: flex-end;
 justify-content: center;
-z-index: -1;
+/* z-index: -1; */
 /* position: relative; */
 /* z-index: 1; */
 
